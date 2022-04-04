@@ -1,151 +1,154 @@
 <!DOCTYPE html>
-
-<html lang="en" style="font-size: 14.225px;">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <meta name="renderer" content="webkit|ie-stand|ie-comp"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>雨</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title>雨滴下落</title>
     <style>
-        body{
-            margin:0;
+        video{
+            display: none;
         }
-        .rain {
+        .rain{
             position: relative;
-            width: 100vw;
-            height: 100vh;
         }
-        .text-container {
-            z-index:10;
-            top:0;
-            left:0;
-            position:absolute;
-            width: 100vw;
-            /* height: 98vh; */
-            color: steelblue;
-            overflow: hidden;
-            padding-top: 15vh;
-        }
-        p{
+        .rain>.text{
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%);
+            font-size: 30px;
+            color: cornflowerblue;      
             text-align: center;
-            display: none;
-            animation: bounce 3s forwards ;
+            transition: 0.5s all;
+            max-height: 70%;
+        }
+        .anistyle{
+            animation: text-show 4.2s ease-in-out;
             white-space: nowrap;
-        }
-        video {
-            display: none;
-        }
-        .canvas1 {
             overflow: hidden;
-            width: 100vw;
-            height: 100vh;
-            z-index:1;
-            position:absolute;  
         }
-        @keyframes bounce{
+        @keyframes text-show{
             0%{
+                opacity: 0.5;
                 width: 0;
-                overflow: hidden;
             }
             100%{
+                opacity: 1;
                 width: 100%;
-                overflow: hidden;
             }
         }
     </style>
-    <body>
-        <video src="./assets/2.mp3"></video>
-        <div class="rain">
-            <canvas class="canvas1"></canvas>
-            <div class="text-container">
-                <p>撑着油纸伞，独自</p>
-                <p>彷徨在悠长、悠长</p>  
-                <p>又寂寥的雨巷</p>
-                <p>我希望逢着</p>  
-                <p>一个丁香一样地</p>
-                <p>结着愁怨的姑娘</p>  
-                <p>她是有</p>
-                <p>丁香一样的颜色</p>  
-                <p>撑着油纸伞，独自</p>
-                <p>彷徨在悠长、悠长</p>  
-                <p>又寂寥的雨巷</p>
-                <p>我希望逢着</p>  
-                <p>一个丁香一样地</p>
-                <p>结着愁怨的姑娘</p>  
-                <p>她是有</p>
-                <p>丁香一样的颜色</p>  
-                <p>撑着油纸伞，独自</p>
-                <p>彷徨在悠长、悠长</p>  
-                <p>又寂寥的雨巷</p>
-                <p>我希望逢着</p>  
-                <p>一个丁香一样地</p>
-                <p>结着愁怨的姑娘</p>  
-                <p>她是有</p>
-                <p>丁香一样的颜色</p>  
-                <p>撑着油纸伞，独自</p>
-                <p>彷徨在悠长、悠长</p>  
-                <p>又寂寥的雨巷</p> 
-                <p>我希望逢着</p>  
-                <p>一个丁香一样地</p>
-                <p>结着愁怨的姑娘</p>  
-                <p>她是有</p>
-                <p>丁香一样的颜色</p>  
-                <p>撑着油纸伞，独自</p>
-                <p>彷徨在悠长、悠长</p>  
-                <p>又寂寥的雨巷</p>
-                <p>我希望逢着</p>  
-                <p>一个丁香一样地</p>
-                <p>结着愁怨的姑娘</p>  
-                <p>她是有</p>
-                <p>丁香一样的颜色</p>  
-            </div>
-   
-        </div>  
- 
-        <script>
+</head>
+<body>
+    <video src="./video/1.mp3"></video>
+    <div class="rain">
+        <canvas></canvas>
+        <div class="text">
+            <p>就把云的潮湿来写意</p>
+            <p>哪怕，制造了碎花乱飞</p>
+            <p>池塘的波心</p>
+            <p>撕去了、碎了，飞起了</p> 
+            <p>那朵朵的花雨</p>
+            <p>粘上一滴，睡去一个残梦的结局</p>
+            <p>是雨滴，我见到了</p>
+            <p>你心雨里藏着的秘密</p> 
+            <p>是冷寂、是透明，花一样的飞行</p>
+            <p>是海水苦涩的囚禁，心里一样甜蜜</p>
+            <p>是风中无情的撕裂，皮肤微凉面带笑意</p>
+            <p>看那飞行</p> 
+            <p>你把直线写起</p>
+            <p>就是风的咒语，也一样开成花形</p>
+            <p>看那舞曲</p>
+            <p>你把最美的琴弦竖起</p>
+            <p>就是泥水的'束缚，  </p>
+            <p>也一样没有改变灵魂最深处的清脆声音</p>
+            <p>是雨滴</p>  
+            <p>外形碎去，绽放出烟花般的美丽</p>  
+            <p>是雨滴 </p>  
+            <p>小草拾去，洗涤了心灵滋润生命万绿  </p>         
+            <p>是雨滴 </p>  
+            <p>滴答的声音，把风行云梦落成 </p>  
+            <p>如果，我的旅程 </p>  
+            <p>选择了直线与花形</p>  
+            <p>我就以雨滴煮梦</p>  
+            <p>静静、沉默、净心地坐进雨滴的心事</p>  
+            <p>哪怕，冷了外衣，不怨不悲 </p>
+            <p>哪怕，凉了灯烛，不叹不伤 </p>
+            <p>我把雨滴外衣披去 </p>
+            <p>画起雨滴落起的云布 </p>
+            <p>看那个天际，一张旧宣纸染色了虹霞  </p>
+            <p>一池的青绿荷叶，包着红莲的梦飞起。 </p>
+        </div>
+    </div>
+ <script>
         let video = document.querySelector("video");
         let canvas = document.querySelector(".rain>canvas");
-        let container = document.querySelector(".rain>.text-container");
-        let pArr = container.querySelectorAll("p");
         let w,h;
         let rainArray=[];
+        let p = document.querySelectorAll(".text>p")
+        let text = document.querySelector(".text")
         ~~function(){
             window.onresize = arguments.callee;//这段代码注意
             w = window.innerWidth;
             h = window.innerHeight;
             canvas.width = w;
             canvas.height = h;
-            setTimeout(() => {
             video.play();
             video.loop = true;
-            },500)
-        
         }();
-
-        async function showP() {
-            let num = 0;
-            for(let domP of pArr) {
-                num++;
-                await new Promise((resolve,reject) => {
-                    setTimeout(() => {
-                        if(num>=15) {
-                        pArr[num-15].style.display='none'
-                    }
-                        domP.style.display='block'
-                        resolve(true)
-                    },2000)
-                })
+        let arr = [...p]
+        let time
+        let index = 0;
+        arr.forEach((item,index)=>{
+                item.style.display = 'none'
+            })
+        async function textshow(){      
+            for(let item of arr){
+                if(parseInt(window.getComputedStyle(text).height)<= h*0.7){
+                    if(arr.indexOf(item)===0){
+                        await
+                        new Promise((resolve,reject)=>{     
+                        time = setTimeout(function(){
+                        item.style.display = 'block'
+                        item.classList.add("anistyle")
+                        resolve()
+                },1000)
+                    })}else{
+                        await 
+                        new Promise((resolve,reject)=>{     
+                        time = setTimeout(function(){
+                            item.style.display = 'block'
+                            item.classList.add("anistyle")
+                            resolve()
+                        },4200)
+                    })}
+                }else{
+                        await 
+                        new Promise((resolve,reject)=>{     
+                        time = setTimeout(function(){
+                            arr[index].remove()
+                            index++;
+                            item.style.display = 'block'
+                            item.classList.add("anistyle")
+                            resolve()
+                        },4200)
+                    })
+                }
+            
+                clearTimeout(time)
             }
         }
-        showP()
+        //文字一行行显示
+        textshow()
         let canCon = canvas.getContext("2d");
         function random(min,max){
             return Math.random()*(max-min)+min;
         }
         class Rain{
             constructor(){
+              
             }
             init(){
                 this.x = random(0,w);//雨滴的x坐标
@@ -199,10 +202,8 @@
                     item.move();
                 }
            },1000/60)
-
-        }
+       }
        carryArray(rainArray);
-        </script>
-    </body>
-    
-    </html>
+ </script>
+</body>
+</html>
